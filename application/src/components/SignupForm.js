@@ -16,7 +16,7 @@ export default class SignupForm extends Component {
   onInstructorChange = (checked) => {
     this.setState({
       formValues: {
-        ...formValues,
+        ...this.state.formValues,
         instructor: checked,
       },
     });
@@ -33,16 +33,17 @@ export default class SignupForm extends Component {
   render() {
     return (
       <div>
+        SignupForm
         {/* form element with onSubmit handler fn */}
         {/* input with properties type: text, name: username, value: formValues.username, onChange: this.handleChange */}
         {/* input with properties type: password, name: password, value: formValues.password, onChange: this.handleChange */}
         {/* toggle for role: instructor or customer */}
-        {/* <Toggle
+        <Toggle
           id="instructor"
           checked={this.state.formValues.instructor}
           onChange={this.onInstructorChange}
         />
-        <label htmlFor="instructor">Instructor</label> */}
+        <label htmlFor="instructor">Instructor</label>
         {/* submit button */}
       </div>
     );
