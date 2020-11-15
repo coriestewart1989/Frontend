@@ -4,23 +4,26 @@ import Toggle from "./Toggle";
 export default class SignupForm extends Component {
   // initial state for formValues: username, password,
   // useState for role: customer or instructor
-  state = {
-    formValues: {
-      username: "",
-      password: "",
-      instructor: false,
-    },
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      formValues: {
+        username: "",
+        password: "",
+        instructor: false,
+      },
+    };
+  }
 
   // change handler fn for role toggle switch
-  onInstructorChange = (checked) => {
+  onInstructorChange(checked) {
     this.setState({
       formValues: {
         ...this.state.formValues,
         instructor: checked,
       },
     });
-  };
+  }
 
   // change handler fn that destructures name and value from e.target and sets state, spreading formValues and
   //// and updating the variable [name] with the value from event
