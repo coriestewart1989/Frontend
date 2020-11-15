@@ -33,7 +33,8 @@ export default function Dashboard({ optionType }) {
           have an onClick handler to run a delete req to api with the
           id of the class(this might need to be in Class component) */}
         {/* map over classes and render Class component for each one */}
-        {/* needs a button for editing */}
+        {/* needs a button for editing, data-testid="dashboard-edit" */}
+        {/* conditionally render edit form for each class */}
       {/* conditionally render list of classes if optionType is
         customer */}
         {/* map over classes and render Class component for each one */}

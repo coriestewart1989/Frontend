@@ -1,8 +1,8 @@
-export const mockData = [
+export const mockClasses = [
   {
     name: "class 1",
     type: "yoga",
-    time: `${new Date.now()}`,
+    time: `${new Date().toUTCString()}`,
     duration: "1 hour",
     intensity: "5",
     location: "Tampa, FL",
@@ -12,7 +12,7 @@ export const mockData = [
   {
     name: "class 2",
     type: "MMA",
-    time: `${new Date.now()}`,
+    time: `${new Date().toUTCString()}`,
     duration: "1 hour",
     intensity: "5",
     location: "Tampa, FL",
@@ -22,7 +22,7 @@ export const mockData = [
   {
     name: "class 3",
     type: "crossfit",
-    time: `${new Date.now()}`,
+    time: `${new Date().toUTCString()}`,
     duration: "1 hour",
     intensity: "5",
     location: "Tampa, FL",
