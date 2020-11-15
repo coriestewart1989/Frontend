@@ -2,11 +2,10 @@
 //// don't worry about it
 import configureMockStore from "redux-mock-store";
 import thunk from "redux-thunk";
-import logger from "redux-logger";
 import moxios from "moxios";
 import * as actions from "../actions";
 import * as constants from "../constants";
-import { fetchClasses as mockFetchClasses } from "../__mocks__/fetchClasses";
+import { fetchClasses as mockFetchClasses } from "../api/fetchClasses";
 import { classesData } from "../__mocks__/classesData";
 
 const middlewares = [thunk];
