@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function Dashboard({ optionType }) {
-  // useSelector to pull user details from reducer 
+  // useSelector to pull user details from reducer
   // useSelector to pull user's classes list from reducer
   // useSelector to pull available classes list from reducer
   // useState for search form
@@ -29,29 +29,29 @@ export default function Dashboard({ optionType }) {
       {/* display user details */}
       {/* conditionally render add/edit classform if optionType is
         instructor */}
-        {/* needs an element to click and delete class which will
+      {/* needs an element to click and delete class which will
           have an onClick handler to run a delete req to api with the
           id of the class(this might need to be in Class component) */}
-        {/* map over classes and render Class component for each one */}
-        {/* needs a button for editing, data-testid="dashboard-edit" */}
-        {/* conditionally render edit form for each class */}
+      {/* map over classes and render Class component for each one */}
+      {/* needs a button for editing, data-testid="dashboard-edit" */}
+      {/* conditionally render edit form for each class */}
       {/* conditionally render list of classes if optionType is
         customer */}
-        {/* map over classes and render Class component for each one */}
-        {/* needs an input element for search input with onChange handler;
+      {/* map over classes and render Class component for each one */}
+      {/* needs an input element for search input with onChange handler;
           this couold be a separate search component */}
-        {/* map over availableClasses and render Class component for each one */}
-          {/* needs to be an element with click listener that sends put request to api
+      {/* map over availableClasses and render Class component for each one */}
+      {/* needs to be an element with click listener that sends put request to api
             to cancel isAttending(might conflate this and below elements to one toggle) */}
-          {/* also need an element with click listener that sends put request to api
+      {/* also need an element with click listener that sends put request to api
             to confirm isAttending(might conflate this and above elements to one toggle) */}
-        {/* also might need a clear search that sends action to reducer to refetch
+      {/* also might need a clear search that sends action to reducer to refetch
           classlist */}
     </div>
-  )
+  );
 }
 
 // default type of customer dashboard unless instructor is passed in
 Dashboard.defaultProps = {
-  optionType = "customer"
-}
+  optionType: "customer",
+};

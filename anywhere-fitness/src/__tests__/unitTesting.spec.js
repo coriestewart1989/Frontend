@@ -24,7 +24,7 @@ describe("Unit Testing", () => {
       mockFetchClasses.mockResolvedValueOnce(mockClasses);
       render(<Classes />);
 
-      waitFor(() => {
+      await waitFor(() => {
         const classes = screen.getByTestId("classes-all");
         expect(classes).toHaveLength(3);
       });
