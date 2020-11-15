@@ -2,8 +2,8 @@ import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 
-import { fetchClasses as mockFetchClasses } from "../__mocks__/fetchClasses";
-import { fetchUesrInfo as mockFetchUserInfo } from "../__mocks__/fetchUserInfo";
+import { fetchClasses as mockFetchClasses } from "../api/fetchClasses";
+import { fetchUesrInfo as mockFetchUserInfo } from "../api/fetchUserInfo";
 import { mockClasses } from "../__mocks__/classesData";
 import { mockClass } from "../__mocks__/classData";
 import { mockUserInfo } from "../__mocks__/userData";
