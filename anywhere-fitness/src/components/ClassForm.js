@@ -21,25 +21,30 @@ export default class ClassForm extends Component {
   render() {
     return (
       <div>
-        {/* form element with submit handler fn */}
+        {/* form element with submit handler fn, data-testid="class-form" */}
         {/* input element with properties type: text, name: name, value:
-          this.state.formValues.name, onChange: this.handleChange */}
+          this.state.formValues.name, onChange: this.handleChange,
+          data-testid="class-form-name" */}
         {/* input element with properties type: text, name: type, value:
-          this.state.formValues.type, onChange: this.handleChange */}
+          this.state.formValues.type, onChange: this.handleChange,
+          data-testid="class-form-type" */}
         {/* input element with properties type: text, name: startTime, value:
-          this.state.formValues.startTime, onChange: this.handleChange */}
+          this.state.formValues.startTime, onChange: this.handleChange,
+          data-testid="class-form-time" */}
         {/* input element with properties type: text, name:  duration, value:
-          this.state.formValues.duration, onChange: this.handleChange */}
+          this.state.formValues.duration, onChange: this.handleChange,
+          data-testid="class-form-duration" */}
         {/* input element with properties type: text, name: intensity, value:
-          this.state.formValues.intensity, onChange: this.handleChange */}
+          this.state.formValues.intensity, onChange: this.handleChange,
+          data-testid="class-form-intensity" */}
         {/* input element with properties type: text, name: location, value:
-          this.state.formValues.location, onChange: this.handleChange */}
-        {/* input element with properties type: text, name: attendees, value:
-          this.state.formValues.attendees, onChange: this.handleChange */}
+          this.state.formValues.location, onChange: this.handleChange,
+          data-testid="class-form-location" */}
         {/* input element with properties type: text, name: maxClassSize, value:
-          this.state.formValues.maxClassSize, onChange: this.handleChange */}
-        {/* confirm button */}
-        {/* cancel button with click handler */}
+          this.state.formValues.maxClassSize, onChange: this.handleChange,
+          data-testid="class-form-size" */}
+        {/* confirm button, data-testid="class-form-submit" */}
+        {/* cancel button with click handler, data-testid="class-fom-cancel" */}
       </div>
     );
   }

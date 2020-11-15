@@ -1,0 +1,32 @@
+export const mockClasses = [
+  {
+    name: "class 1",
+    type: "yoga",
+    time: `${new Date().toUTCString()}`,
+    duration: "1 hour",
+    intensity: "5",
+    location: "Tampa, FL",
+    numOfAttendies: "10",
+    maxSize: "18",
+  },
+  {
+    name: "class 2",
+    type: "MMA",
+    time: `${new Date().toUTCString()}`,
+    duration: "1 hour",
+    intensity: "5",
+    location: "Tampa, FL",
+    numOfAttendies: "10",
+    maxSize: "18",
+  },
+  {
+    name: "class 3",
+    type: "crossfit",
+    time: `${new Date().toUTCString()}`,
+    duration: "1 hour",
+    intensity: "5",
+    location: "Tampa, FL",
+    numOfAttendies: "10",
+    maxSize: "18",
+  },
+];
