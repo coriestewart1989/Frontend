@@ -14,7 +14,7 @@ const mockStore = configureMockStore(middlewares);
 
 describe("Actions unit testing", () => {
   beforeEach(() => moxios.install());
-  beforeEach(() => moxios.install());
+  afterEach(() => moxios.uninstall());
 
   it("create FETCH_CLASSES_SUCCESS after successfully fetching classes", () => {
     moxios.await(() => {
