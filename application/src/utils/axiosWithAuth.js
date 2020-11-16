@@ -1,10 +1,13 @@
-// axios with authentication
+import axios from 'axios'
 
-// axiosWithAuth fn
-// function that returns an axios object using create method that initializes
-// the headers:
-////// Authorization
-////// baseURL
-//// with the values:
-////// auth: token location
-////// baseURL: api's baseUrl
+
+export const axiosWithAuth = () => {
+    const token = localStorage.getItem('token');
+
+    return axios.create({
+        baseURL: 'https://covid-bod.herokuapp.com/',
+        headers: {
+            authorization: token
+        }
+    })
+}

@@ -1,5 +1,6 @@
 import React from "react";
-
+import { Dashboard } from './Dashboard'
+import { Signin } from './SigninForm'
 import SignupForm from "./SignupForm";
 
 export default function App() {
@@ -22,6 +23,26 @@ export default function App() {
         Component based on role(pass "instructor" to optionType if user is intructor) */}
       {/* PrivateRoute for path "/classes" that renders Classes Component if logged in */}
       {/* End of Switch */}
+      <Router>
+        <div>
+          <ul>
+            <li>
+              <Link to="/Signin">Login</Link>
+            </li>
+            <li>
+              <Link onClick={logout}>Logout</Link>
+            </li>
+            <li>
+              <Link to="/dashboard">Dashboard</Link>
+            </li>
+          </ul>
+          <Switch>
+            <PrivateRoute exact path="/dashboard" component={Dashboard} />
+            <Route path="/Signin" component={Signin} />
+            <Route component={Signin} />
+          </Switch>
+        </div>
+      </Router>
     </div>
   );
 }
