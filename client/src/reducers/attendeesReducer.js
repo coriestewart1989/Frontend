@@ -17,7 +17,7 @@ export const attendeesReducer = (state = initialState, action) => {
         ...state,
         isFetching: true,
       };
-    case FETCH_ATTENDEES_START:
+    case FETCH_ATTENDEES_SUCCESS:
       return {
         ...state,
         isFetching: false,
