@@ -1,6 +1,23 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+// import { axiosWithAuth } from "../utils/axiosWithAuth";
+import axios from "axios";
 
-export default function Customer_Dashboard() {
+export default function CustomerDashboard() {
+  const [classes, setClasses] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://cors-anywhere.herokuapp.com/https://covid-bod.herokuapp.com/api/classes"
+      )
+      .then((res) => {
+        setClasses(res.data);
+      })
+      .catch((err) => {
+        console.log("Get Classes Failure ==>> ", err.message);
+      });
+  }, []);
+
   return (
     <div>
       {/* map over classes and render Class component for each one */}
@@ -14,5 +31,5 @@ export default function Customer_Dashboard() {
       {/* also might need a clear search that sends action to reducer to refetch
           classlist */}
     </div>
-  )
+  );
 }

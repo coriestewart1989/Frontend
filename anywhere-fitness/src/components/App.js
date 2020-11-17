@@ -1,4 +1,5 @@
 import React from "react";
+import Customer_Dashboard from "./Customer_Dashboard";
 
 import SignupForm from "./SignupForm";
 
@@ -10,6 +11,7 @@ export default function App() {
   return (
     <div>
       App
+      <Customer_Dashboard />
       {/* Link to Home/Signin */}
       {/* Link to Signup */}
       {/* conditionally rendered Link to Dashboard if logged in */}
@@ -17,7 +19,7 @@ export default function App() {
       {/* Switch for Routes */}
       {/* Route for path root that renders SigninForm */}
       {/* Route for path /signup that renders SignupForm */}
-      <SignupForm />
+      {/* <SignupForm /> */}
       {/* PrivateRoute for path "/dashboard" that renders Dashboard
         Component based on role(pass "instructor" to optionType if user is intructor) */}
       {/* PrivateRoute for path "/classes" that renders Classes Component if logged in */}

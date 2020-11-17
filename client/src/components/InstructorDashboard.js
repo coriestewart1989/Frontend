@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 
-export default function Instructor_Dashboard() {
+export default function InstructorDashboard() {
   return (
     <div>
       {/* display user details */}
@@ -15,8 +15,5 @@ export default function Instructor_Dashboard() {
       {/* conditionally render list of classes if optionType is
         customer */}
     </div>
-  )
+  );
 }
-
-
-
