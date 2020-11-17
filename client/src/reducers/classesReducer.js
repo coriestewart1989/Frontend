@@ -44,59 +44,59 @@ export const classesReducer = (state = initialState, action) => {
       return {
         ...state,
         isPosting: true,
-      }
+      };
     case ADD_CLASS_SUCCESS:
       return {
         ...state,
         isPosting: false,
         classes: action.payload,
-      }
+      };
     case ADD_CLASS_FAILURE:
       return {
         ...state,
         isPosting: false,
         error: action.payload,
-      }
+      };
     case EDIT_CLASS_START:
       return {
         ...state,
         isEditing: true,
-      }
+      };
     case EDIT_CLASS_SUCCESS:
       return {
         ...state,
         isEditing: false,
         classes: state.classes.map((cls) => {
-          if (cls.id == action.payload.id) {
-            return action.payload
+          if (cls.id === Number(action.payload.id)) {
+            return action.payload;
           } else {
-            return cls
+            return cls;
           }
-        })
-      }
+        }),
+      };
     case EDIT_CLASS_FAILURE:
       return {
         ...state,
         isEditing: false,
-        error: action.payload
-      }
+        error: action.payload,
+      };
     case DELETE_CLASS_START:
       return {
         ...state,
         isDeleting: true,
-      }
+      };
     case DELETE_CLASS_SUCCESS:
       return {
         ...state,
         isDeleting: false,
-        classes: state.classes.filter((cls) => class.id !== action.payload)
-      }
+        classes: state.classes.filter((cls) => cls.id !== action.payload),
+      };
     case DELETE_CLASS_FAILURE:
       return {
         ...state,
         isDeleting: false,
-        error: action.payload
-      }
+        error: action.payload,
+      };
     default:
       return state;
   }
