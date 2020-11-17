@@ -17,7 +17,7 @@ export default function App() {
       {/* Switch for Routes */}
       {/* Route for path root that renders SigninForm */}
       {/* Route for path /signup that renders SignupForm */}
-      <SignupForm />
+      <SigninForm />
       {/* PrivateRoute for path "/dashboard" that renders Dashboard
         Component based on role(pass "instructor" to optionType if user is intructor) */}
       {/* PrivateRoute for path "/classes" that renders Classes Component if logged in */}
