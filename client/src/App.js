@@ -5,6 +5,7 @@ import SigninForm from "./components/SigninForm";
 import SignupForm from "./components/SignupForm";
 import Dashboard from "./components/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
+import CustomerDashboard from "./components/CustomerDashboard";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/signup" component={SignupForm} />
         <PrivateRoute path="/dashboard" component={Dashboard} />
       </Switch>
+      <CustomerDashboard />
     </div>
   );
 }
