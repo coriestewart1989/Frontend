@@ -36,6 +36,8 @@ function App() {
         />
         <PrivateRoute path="/instructor/:id" component={InstructorDashboard} />
         <PrivateRoute path="/customer/:id" component={CustomerDashboard} />
+        <Route path="/corie" component={SignupForm} />
+        <Route path="/george" component={SigninForm} />
       </Switch>
       <CustomerDashboard />
     </div>
